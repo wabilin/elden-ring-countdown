@@ -1,6 +1,7 @@
 import type { Component } from 'solid-js';
 import { createSignal, onCleanup } from 'solid-js';
 import { dayDiff } from './lib/dayDiff'
+import forkMe from './assets/forkme.png';
 
 const App: Component = () => {
   const releaseDate = new Date('2022-02-25T08:00:00.000Z')
@@ -28,6 +29,16 @@ const App: Component = () => {
         {diff().minutes}分&nbsp;
         {String(diff().seconds).padStart(2, '0')}秒
       </strong>
+      <a
+        href="https://github.com/wabilin/elden-ring-countdown"
+        className="fixed block right-0 top-0 opacity-70"
+      >
+        <img
+          loading="lazy" width="149" height="149"
+          src={forkMe}
+          alt="Fork me on GitHub"
+        />
+      </a>
     </main>
   );
 };
