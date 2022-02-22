@@ -18,10 +18,7 @@ const App: Component = () => {
   const diff = () => dayDiff(releaseDate, now());
 
   return (
-    <main
-      className="flex flex-col justify-center items-center min-h-screen
-      bg-neutral-900 text-[#DEC06F]"
-    >
+    <main className="flex flex-col justify-center items-center min-h-screen">
       <h1 className="text-2xl sm:text-4xl my-2 sm:my-4 font-black">エルデンリング発売まで</h1>
       <strong className="text-xl sm:text-3xl font-mono">
         {diff().days}日&nbsp;
