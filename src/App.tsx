@@ -1,26 +1,25 @@
 import type { Component } from 'solid-js';
-
-import logo from './logo.svg';
-import styles from './App.module.css';
+import { createSignal, onCleanup } from 'solid-js';
+import { dayDiff } from './lib/dayDiff'
 
 const App: Component = () => {
+  const releaseDate = new Date('2022-02-25T08:00:00.000Z')
+  const [now, setNow] = createSignal(new Date());
+
+  const timer = setInterval(() => {
+    setNow(() => {
+     const d =  new Date()
+     return d
+    })
+  }, 1000);
+  onCleanup(() => clearInterval(timer));
+
+  const diff = () => dayDiff(releaseDate, now());
+
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
+    <main>
+      {diff().days}日 {diff().hours}時 {diff().minutes}分 {diff().seconds}秒
+    </main>
   );
 };
 
