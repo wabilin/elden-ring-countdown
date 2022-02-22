@@ -10,7 +10,7 @@ export type DayDiff = {
 }
 
 export function dayDiff(a: Date, b: Date): DayDiff {
-  const timeLeft = a.getTime() - b.getTime();
+  const timeLeft = Math.max(a.getTime() - b.getTime(), 0);
   const days = Math.floor(timeLeft / msPerDay);
   const moddedMs = Math.floor(timeLeft % msPerDay);
   const hours = Math.floor(moddedMs / msPerHour);
