@@ -1,0 +1,14 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg" style="background: #171717">
+ <title>RING</title>
+
+ <g>
+  <title>Layer 1</title>
+  <ellipse id="svg_4" cy="186.5" cx="283" stroke-width="5" stroke="#000" fill="#fff"/>
+  <ellipse stroke="#dec06f" ry="132.70993" rx="143.97312" id="svg_6" cy="193.56871" cx="250.92652" stroke-width="12" fill="none"/>
+  <path id="svg_7" d="m177.97312,464.06491c-79.54316,0 -143.97312,-59.38953 -143.97312,-132.70993c0,-73.3204 64.42996,-132.70993 143.97312,-132.70993c79.54316,0 143.97312,59.38953 143.97312,132.70993c0,73.3204 -64.42996,132.70993 -143.97312,132.70993z" opacity="undefined" stroke-width="12" stroke="#dec06f" fill="none"/>
+  <ellipse stroke="#dec06f" ry="132.70993" rx="143.97312" id="svg_8" cy="329.9046" cx="326.02688" stroke-width="12" fill="none"/>
+  <path id="svg_9" d="m251.28674,28.95036l0,452.6173" opacity="undefined" stroke-width="12" stroke="#dec06f" fill="none"/>
+  <ellipse stroke="#dec06f" ry="152.38933" rx="168.28851" id="svg_10" cy="292.01911" cx="251.21324" stroke-width="8" fill="none"/>
+  <line id="svg_20" y2="29.95038" x2="287.19713" y1="28.5" x1="217.80287" stroke-width="10" stroke="#dec06f" fill="none"/>
+ </g>
+</svg>
