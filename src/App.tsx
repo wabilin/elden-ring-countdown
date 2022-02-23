@@ -1,6 +1,6 @@
 import type { Component } from 'solid-js';
 import { createSignal, onCleanup } from 'solid-js';
-import { dayDiff } from './lib/dayDiff'
+import { dayDiff } from './lib/dayDiff';
 import ForkMe from './ForkMe';
 import Particles from './Particles';
 
@@ -10,9 +10,9 @@ const App: Component = () => {
 
   const timer = setInterval(() => {
     setNow(() => {
-     const d =  new Date()
-     return d
-    })
+      const d = new Date();
+      return d;
+    });
   }, 1000);
   onCleanup(() => clearInterval(timer));
 

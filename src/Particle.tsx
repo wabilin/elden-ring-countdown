@@ -1,5 +1,5 @@
+import { createSignal, onMount, onCleanup } from 'solid-js';
 import styles from './Particle.module.css';
-import { createSignal, onMount, onCleanup } from "solid-js";
 
 export default function Particle() {
   const radius = Math.round(Math.random() * 8 + 4);
@@ -32,27 +32,27 @@ export default function Particle() {
     const updatePos = () => {
       updateXSpeed();
 
-      setY(v => {
-        const next = v - ySpeed
-        return next < -55 ? 51 : next
-      })
+      setY((v) => {
+        const next = v - ySpeed;
+        return next < -55 ? 51 : next;
+      });
 
-      setX(v => {
-        const next = v + xSpeed
+      setX((v) => {
+        const next = v + xSpeed;
 
         if (next < -55) {
           return 51;
-        } else if (next > 55) {
+        } if (next > 55) {
           return -51;
         }
         return next;
       });
-    }
-    const timer = setInterval(updatePos, 1000)
+    };
+    const timer = setInterval(updatePos, 1000);
     updatePos();
 
-    onCleanup(() => { clearInterval(timer) });
-  })
+    onCleanup(() => { clearInterval(timer); });
+  });
 
   return (
     <div
@@ -63,8 +63,8 @@ export default function Particle() {
         transform: `translate3d(${x()}vw, ${y()}vh, 0`,
         width: `${radius}px`,
         height: `${radius}px`,
-        "transition-property": (y() === 51 || [51, -51].includes(x())) ? 'none' : "transform",
+        'transition-property': (y() === 51 || [51, -51].includes(x())) ? 'none' : 'transform',
       }}
     />
-  )
+  );
 }

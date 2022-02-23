@@ -13,5 +13,5 @@ export default function ForkMe() {
         alt="Fork me on GitHub"
       />
     </a>
-  )
+  );
 }
