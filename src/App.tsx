@@ -1,7 +1,7 @@
 import type { Component } from 'solid-js';
 import { createSignal, onCleanup } from 'solid-js';
 import { dayDiff } from './lib/dayDiff'
-import forkMe from './assets/forkme.png';
+import forkMe from './assets/github-corner-right.svg';
 
 const App: Component = () => {
   const releaseDate = new Date('2022-02-25T08:00:00+09:00');
@@ -28,10 +28,11 @@ const App: Component = () => {
       </strong>
       <a
         href="https://github.com/wabilin/elden-ring-countdown"
-        className="fixed block right-0 top-0 opacity-70"
+        className="fixed block right-0 top-0 opacity-90"
       >
         <img
-          loading="lazy" width="149" height="149"
+          loading="lazy" width="250" height="250"
+          className="w-20 h-20 sm:w-32 sm:h-32 aspect-square"
           src={forkMe}
           alt="Fork me on GitHub"
         />
