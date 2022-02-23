@@ -4,7 +4,7 @@ import { dayDiff } from './lib/dayDiff'
 import forkMe from './assets/forkme.png';
 
 const App: Component = () => {
-  const releaseDate = new Date('2022-02-25T08:00:00.000Z')
+  const releaseDate = new Date('2022-02-25T08:00:00+09:00');
   const [now, setNow] = createSignal(new Date());
 
   const timer = setInterval(() => {
