@@ -1,0 +1,6 @@
+.particle {
+  @apply fixed rounded-full bg-amber-400 top-1/2 left-1/2;
+  transition-property: transform;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
