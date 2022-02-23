@@ -14,8 +14,8 @@ export function dayDiff(a: Date, b: Date): DayDiff {
   const days = Math.floor(timeLeft / msPerDay);
   const moddedMs = Math.floor(timeLeft % msPerDay);
   const hours = Math.floor(moddedMs / msPerHour);
-  const minutes = Math.floor(moddedMs % msPerHour / msPerMinute);
-  const seconds = Math.floor(moddedMs % msPerHour % msPerMinute / 1000);
+  const minutes = Math.floor((moddedMs % msPerHour) / msPerMinute);
+  const seconds = Math.floor(((moddedMs % msPerHour) % msPerMinute) / 1000);
 
   return {
     days, hours, minutes, seconds,
